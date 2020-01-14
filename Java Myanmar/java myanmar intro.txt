@@ -1,0 +1,15 @@
+JAVA ပရိုဂရမ်းမင်း ကို မြန်မာဘာသာ နဲ့ offline လေ့လာနိုင်မယ့် Application ဖြစ်ပါတယ်။
+အခြေခံ အခန်း (၇) ခန်းပါဝင်ပါတယ်
+
+"Java မိတ်ဆက်",
+"JAVA နဲ့ C++",
+" JAVA ပရိုဂရမ်းမင်း",
+"APPLETS ပရိုဂရမ်းမင်း",
+"GRAPHICS USING APPLETS",
+"OBJECT Orients Programming : OOP",
+"နောက်ထပ်ဘာတွေ ရှိသေးလဲ"
+
+
+Playstore မှာ အခမဲ့ Download လုပ်နိုင်ပါပြီ
+
+https://play.google.com/store/apps/details?id=com.teamcs.javamyanmar
