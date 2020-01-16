@@ -1,0 +1,15 @@
+အိမ်မက်ကျမ်း [ Source Code ]
+
+ကျွန်တော်တို့ ရေးထားတဲ့ အိမ်မက်ကျမ်း Application Source Code နဲ့ Dataset ကို အောက်က LInk က ရယူနိုင်ပါတယ်
+
+App Source Code :
+https://github.com/aungkoman/dream-translate-app
+
+အိမ်မက် ငါးရာ Dataset
+https://github.com/aungkoman/dream-translate-dataset
+
+Playstore Link : 
+https://play.google.com/store/apps/details?id=com.teamcs.dream
+
+Facebook Page :
+fb.me/mmsoftware100
