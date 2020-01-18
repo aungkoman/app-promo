@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>ထီပေါက် မပေါက်</title>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Material Design Bootstrap -->
+	<link rel="stylesheet" href="css/mdb.min.css">
+	<!-- Our custom styles (optional) -->
+	<link rel="stylesheet" href="css/teamcs.css">
+	
+	<link rel="icon" href="images/app_icon.png" type="image/gif" sizes="16x16">
+
+		<style>		
+		.my_card{
+			margin-bottom: 20px;
+		}
+		.no_link{
+			text-decoration: none;
+		}
+		#popupbox{
+			display:none;
+		}
+		</style>
+</head>
+
+<body class="fixed-sn white-skin">
+
+	<!-- Main Navigation -->
+	<header>
+		<!-- Sidebar navigation -->
+		<div id="slide-out" class="side-nav sn-bg-4 fixed">
+			<ul class="custom-scrollbar">
+				<!-- Logo -->
+				<li class="logo-sn waves-effect py-3">
+					<div class="text-center">
+						<a href="#" class="pl-0">
+							<img src="images/team-cs-logo.png">
+						</a>
+						<p style="color:black; font-size:12px; padding-top: 50px;">
+							ထီပေါက် မပေါက်
+						<p>
+					</div>
+				</li>
+				<!-- Side navigation links -->
+				<li>
+					<ul class="collapsible collapsible-accordion">
+						<li>
+							<a class="collapsible-header waves-effect arrow-r"> <i class="fab fa-android "></i>ထီတွက်ရန်<i class="fas fa-angle-down rotate-icon"></i>
+							</a>
+							<div class="collapsible-body">
+								<ul>
+									<li> <a href="#intro_section" class="waves-effect ui_navigation" id='departmentBtn'>ထီပေါက် မပေါက် တွက်မည်</a>
+									</li>
+									<li> <a href="#read_section" class="waves-effect ui_navigation" id='readBtn'>ထီနှင့်ပတ်သတ်သော ဗေဒင်ယတြာများ</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li> <a href="#About_section" class="collapsible-header waves-effect ui_navigation" id="Aboutbtn"><i
+							class="w-fa fas fa-chart-pie  ui_navigation"></i>About Software</a>
+								  </li>
+						<!-- Simple link -->
+						<li> <a href="#contact_section" class="collapsible-header waves-effect ui_navigation" id="Aboutbtn"><i
+                  class="w-fa fas fa-chart-pie  ui_navigation"></i>Contact Us</a>
+						</li>
+					</ul>
+				</li>
+				<!-- Side navigation links -->
+			</ul>
+			<div class="sidenav-bg mask-strong"></div>
+		</div>
+		<!-- Sidebar navigation -->
+		<!-- Navbar -->
+		<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav" id="nav_id">
+			<!-- SideNav slide-out button -->
+			<div class="float-left"> <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+			</div>
+			<!-- Breadcrumb -->
+			<div class="breadcrumb-dn mr-auto align-center">
+				<p></p>
+			</div>
+			<div class="title_text mr-auto align-center text-center">
+				<h4 id="header_id">ထီပေါက် မပေါက် တွက်မည်  </h4>
+			</div>
+			
+		</nav>		
+	</header>
+	<!-- Main Navigation -->
+
+	<!-- Main layout -->
+	<main>
+		<div class="container-fluid">
+			<!-- Section: Intro -->
+			<section id="intro_section">
+				<h2>စလေဦးပုည၏ ထီပေါက် မပေါက် တွက်နည်းဖြစ်ပါတယ်။</h2></br>
+				<h4>ထီပေါက်ချင်လျှင် စာရေးတံမဲလှူပါ။</h4></br></br>
+						<div class="md-form" >							
+							<input type="date" id='birthday' class="form-control">
+								<label for="birthday"> မိမိ မွေးနေ့ ရွေးချယ်ပါ</label></br>
+							<input type="button" class="btn btn-info" id="calculate" value=" တွက်မည် " />
+						</div>					
+						
+					 <div id='popupbox' class="md-form" style='margin:0 auto;position:absolute;z-index:100;left:0;right:0;bottom:10%;top:20%;background:rgb(190, 250, 78);
+					 width:80%;height:200px;border-radius:5px;'></br><i class="fas fa-times close" id='popup_close'></i>					
+							<center><p><span class='conn' ></span></p>
+								<p><span class='y_or_n' ></span></p>
+								<!-- <p><span class='word' style="color:rgb(214, 26, 136)"> ဒီဂဏန်းလေးတွေ ထိုးပေးပါ...</span></p> -->
+								<p><span class='digist' ></span></p>
+								<p><span class='word' ></span></p>
+								<p><span class='same' ></span></p>
+							</center>
+							<!-- <button type="button" id='popup_close' style='width:20%;height:50px;background-color: brown;border-radius: 5px;margin-left:50%;margin-top:0%;'>ပိတ်မည်</button>		 -->
+					</div>		
+			</section>
+			<!-- Section: Instro -->
+			<!-- Section: About_section -->
+			<section id="About_section">
+
+				<h3><p><span>"မင်္ဂလာပါ"</span></p></h3>
+				<span><p></p>
+					လောကတွင် လူတိုင်း တကြိမ်တခါ ကံကောင်းတတ်ပါသည်။</span></p>
+					<span><p></p>
+					ထိုတစ်ကြိမ်တခါ ကံကောင်းတတ်သော အချိန်အခါအား မသိလိုက်၍ ကံကောင်းသော အချိန်အခါနှင့် လွဲချောမသွားအောင် 
+					ထီပေါက် မပေါက် app မှ ထီပေါက်နိုင်ချေ ရှိ မရှိအား တွက်ချက် ဖော်ပြပေးသွားမှာ ဖြစ်ပါတယ်။</span></p>
+					<span><p></p>
+					ထီပေါက်နိုင်ချေရှိလျှင်လည်း ထိုးသင့်သော ဂဏန်းများကိုပါ ဖော်ပြထားပါတယ်။</span></p>
+					<span><p></p>
+					ထီပေါက်နိုင်ချေရှိပြီး မထိုးလိုက်ရ၍ ထီမပေါက်ဘဲ ဝမ်းနည်းနေရမယ့် သူများမဖြစ်အောင် 
+					ရည်သန်၍ ဖန်တီးခဲ့ခြင်းဖြစ်ပါသည်။ </span></p>
+					<span><p></p>
+					လာရောက်အသုံးပြုသူများ အဆင်ပြေမှု ရှိစေရန် 
+					အကောင်းဆုံးကြိုးစားထားပါသည်။ 
+					အဆင်ပြေကြလိမ့်မည်ဟု မျှော်လင့်မိပါသည်။ </span></p>
+					<span><p></p>
+					လိုအပ်ချက်များရှိပါက မိမိတို့ Facebook page တွင် လာရောက်အကြံပေးနိုင်ပါသည်။ 
+					ယခုထက် ပိုမိုကောင်းမွန်သော ၀န်ဆောင်မှုများပေးနိုင်ရန် ထပ်မံကြိုးစားသွားပါဦးမည်။
+				</span></p>
+
+				<span><p>ကျေးဇူးတင်ပါသည်။</span></p>
+					
+				<h4>စလေဦးပုည၏ ထီပေါက် မပေါက် တွက်နည်းဖြစ်ပါတယ်။</h4></br>
+				
+					<div>	
+								<p><span class='' >
+									၁။ မိမိရဲ့ မြန်မာ မွေးခုနှစ်ကို တည်
+									
+									မိမိရဲ့ ဂြိုဟ်သက်နှင့် ပေါင်းပါ။</span> </p>
+							<p><span>ဂြိုဟ်သက်များ </span></p>
+										
+								<p><span>တနင်္ဂနွေ= ၆ </span></p>
+										
+								<p><span>တနင်္လာ= ၁၅ </span></p>
+										
+								<p><span>အင်္ဂါ= ၈ </span></p>
+										
+								<p><span>ဗုဒ္ဓဟူး= ၁၇ </span></p>
+										
+								<p><span>ကြာသပ‌တေး= ၁၉ </span></p>
+										
+								<p><span>သောကြာ= ၂၁ </span></p>	
+									
+								<p><span>စနေ= ၁၀ </span></p>
+										
+								<p><span>ရာဟု= ၁၂ ဟု သတ်မှတ်ထားပါသည်။ (ယခု app တွင် ရာဟုသားသမီးများအတွက် မရရှိသေးပါ)</span></p>
+								
+								<p><span> ၂။ ပေါင်းပြီး ၄၃နဲ့ (÷)ပါ။</span> </p>
+								
+								<p><span>၃။ ရရှိတဲ့ အကြွင်းနဲ့ မိမိရဲ့ အသက်နဲ့ ထပ်ပေါင်းပါ။
+									
+										မိမိအသက်ဆိုတာ ၂၉ ပြည့်ပြီးလျှင် ၃ဝလို့ ယူရပါမယ်။ </span></p>
+									
+								<p><span>၄။ ပေါင်းပြီးလျှင် ၇နဲ့ ထပ် (÷)စားပါ။
+								
+										ရလာတဲ့ အကြွင်းက
+										
+										ဝကြွင်း၊ ၅ကြွင်းဆို ထီဆုကြီးပေါက်မည်။
+										
+										၁ကြွင်း၊ ၆ကြွင်းဆို ထီဆုသေး ဖြစ်မည်။ </span></p>
+
+								<p><span>ထိုသို့ ပေါက်ဖို့အခွင့်ရှိလာလျှင်
+									
+									မိမိ၏ မြန်မာမွေးခုနှစ်ကို တည် ၇ဖြင့် ထပ် (÷)စားပါ။ 	</span></p>
+								<center><p><span> ၁ကြွင်း = ၇အစ ၅အဆုံး၊ ၆အစ ၅အဆုံး ထိုးပေးပါ </span></p>	
+									
+									<p><span> ၂ကြွင်း= ၁အစ ၆အဆုံး၊ ၆အစ ၇အဆုံး ထိုးပေးပါ </span></p>	
+										
+									<p><span> ၃ကြွင်း= ၂အစ ၇အဆုံး၊ ၅အစ ၇အဆုံး ထိုးပေးပါ </span></p>	
+										
+									<p><span> ၄ကြွင်း= ၃အစ ၁အဆုံး၊ ၂အစ ၁အဆုံး ထိုးပေးပါ </span></p>	
+										
+									<p><span> ၅ကြွင်း= ၄အစ ၂အဆုံး၊ ၃အစ ၂အဆုံး ထိုးပေးပါ </span></p>	
+										
+									<p><span> ၆ကြွင်း= ၅အစ ၃အဆုံး၊ ၃အစ ၄အဆုံး ထိုးပေးပါ </span></p>	
+										
+									<p><span> ၀ကြွင်း= ၆အစ ၄အဆုံး၊ ၅အစ ၄အဆုံး ထိုးပေးပါ </span></p>	</center>
+
+						<span><p>စလေဦးပုည၏ ထီပေါက် မပေါက် တွက်နည်းမူရင်း ဖော်ပြပေးသူအား Credit ပေးပါသည်။ ကျေးဇူးတင်ပါသည်။</span></p>		
+
+								
+
+								
+
+
+							<!-- <button type="button" id='popup_close' style='width:20%;height:50px;background-color: brown;border-radius: 5px;margin-left:50%;margin-top:0%;'>ပိတ်မည်</button>		 -->
+					</div>		
+			</section>
+			<!-- Section: Instro -->
+			<section id="read_section">
+				<center><h3>  မကြာမီ ထီနှင့်ပတ်သတ်သော ဗေဒင်ယတြာများအကြောင်း စုစည်း တင်ပြပေးသွားပါမည်။  </h3></center></br>
+			</section>
+			<section id="contact_section">
+				<h3> <p><span> ဆက်သွယ်ရန် လိပ်စာ </span></p></h3>
+					<p><span> ဤ  App နှင့်ပါတ်သက်၍
+						အဆင်မပြေမှုများ၊ အခက်အခဲများ ၊ အကြံပေးလိုသည်များ ရှိပါက အောက်ဖော်ပြပါ လိပ်စာများသို့
+						ဆက်သွယ် အကူအညီတောင်းခံနိုင်ပါသည်။ </span></p>
+					<p><span> ကျေးဇူးတင်ပါသည်။ </span></p><center>
+					<p><span> Email : </span><span><a href="https://teamcs16.mm@gmail.com">teamcs16.mm@gmail.com</a></span></p>
+					<p><span> Facebook : </span><span><a href="https://www.facebook.com/mmsoftware100">www.facebook.com/mmsoftware100</a> </span></p>
+					<p><span> Google Play : </span><span><a href="https://play.google.com/store/search?q=pub:TEAM%20CS&c=apps">https://play.google.com/teamcs</a> </span></p>  </center></br>
+			</section>
+		</div>
+	</main>
+	<!-- Main layout -->
+
+	<!-- Footer -->
+	<footer class="page-footer pt-0 mt-5 rgba-stylish-light">
+		<!-- Copyright -->
+		<div class="footer-copyright py-3 text-center">
+			<div class="container-fluid">Developed By : <a href="#https://www.facebook.com/mmsoftware100" target="_blank"> TEAM CS </a>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+	
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	
+	<script src="js/modernizr.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/underscore.min.js"></script>
+	<script src="js/backbone.js"></script>
+
+	<!-- Initializations -->
+	<script>
+		// SideNav Initialization
+		    $(".button-collapse").sideNav();
+		
+		    var container = document.querySelector('.custom-scrollbar');
+		    var ps = new PerfectScrollbar(container, {
+		      wheelSpeed: 2,
+		      wheelPropagation: true,
+		      minScrollbarLength: 20
+		    });
+		
+		    // Data Picker Initialization
+		    //$('.datepicker').pickadate();
+		
+		    // Material Select Initialization
+		    $(document).ready(function () {
+		      
+		      $('.mdb-select').material_select();
+		
+		      $('section').hide();
+		      $("#intro_section").show();
+		      // login section show
+		      // all hide
+		
+		
+		      $('.ui_navigation').click(function(){
+		          var link = $(this).attr('href');
+		          link = link.substring(1);
+		          //alert(link);
+		          $('section').hide();
+		          $("#"+link).show();
+		      });
+		    });
+		
+		    // Tooltips Initialization
+		    $(function () {
+		      $('[data-toggle="tooltip"]').tooltip()
+			})
+	
+	</script>
+
+	<!-- Our JavaScript --> 
+	<script type="text/javascript" src="js/software_store.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(document).on("click", "#calculate", function() {
+				$(".y_or_n").empty();
+				$(".digist").empty();
+				$(".word").empty();
+				$(".conn").empty();
+				$(".same").empty();
+						var inputdata = $('#birthday').val();
+						var data = new Date(inputdata);
+						//alert(data);
+						var day = data.getDay();
+						var date = data.getDate();
+						var month = data.getMonth();
+						var year = data.getFullYear();
+						var dateStr = day +"/"+ date +"/"+ month + "/" + year;
+						//alert(dateStr);
+						var current_date = new Date();
+						// var diff_date = current_date - data ;
+						// alert(diff_date);
+						var diffTime = Math.abs(current_date - data);
+						var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+
+						console.log(diffDays);
+						//alert(diffDays);
+
+						var calculate_age = parseInt( diffDays / 365 );
+						//alert(calculate_age);
+
+						current_age = calculate_age + 1 ;
+						//alert(current_age);
+
+						if(month == 1 || month == 2 || month == 3){
+							var mm_year = (year - 639);
+						}else{
+							var mm_year = (year - 638);
+						}
+						//alert(mm_year);
+						
+						if(day == 1){
+							var planet = mm_year + 15 ;
+						}
+						if(day == 2){
+							var planet = mm_year + 8 ;
+						}
+						if(day == 3){
+							var planet = mm_year + 17 ;
+						}
+						if(day == 4){
+							var planet = mm_year + 19 ;
+						}
+						if(day == 5){
+							var planet = mm_year + 21 ;
+						}
+						if(day == 6){
+							var planet = mm_year + 10 ;
+						}
+						if(day == 7){
+							var planet = mm_year + 6 ;
+						}
+
+						//alert(planet); //၁။ မိမိရဲ့ မြန်မာ မွေးခုနှစ်ကို တည်မိမိရဲ့ ဂြိုဟ်သက်နှင့် ပေါင်းပါ။
+
+						var planet_modulo = planet % 43 ; //၂။ ပေါင်းပြီး ၄၃နဲ့ (÷)ပါ။
+
+
+						var modulo_age = planet_modulo + current_age ; //၃။ ရရှိတဲ့ အကြွင်းနဲ့ မိမိရဲ့ အသက်နဲ့ ထပ်ပေါင်းပါ။
+
+						var last_modulo = modulo_age % 7 ; //၄။ ပေါင်းပြီးလျှှင် ၇နဲ့ ထပ် (÷)စားပါ။
+						//alert("module "+last_modulo);
+
+						if(last_modulo == 0 || last_modulo == 5){
+							//alert("You would have to Highest Prizes....");
+							$(".conn").html("<i class='far fa-smile-beam'></i>ဝမ်းသာပါတယ်!<i class='far fa-smile-beam'></i>")
+							$(".y_or_n").text("ယခုနှစ်အတွင်း သင် ထီဆု အကြီး ပေါက်နိုင်သည်။");
+							var pwa = mm_year % 7 ;
+							//alert(pwa);
+								if(pwa == 0){
+									//alert("first digist is 6 and Last digist is 4" + "first digist is 5 and Last digist is 4");//၆အစ ၄အဆုံး၊ ၅အစ ၄အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၆'အစ '၄'အဆုံး နှင့်  '၅'အစ '၄'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 1){
+									//alert("first digist is 7 and Last digist is 5" + "first digist is 6 and Last digist is 5");//'၇'အစ '၅'အဆုံး၊ '၆'အစ '၅'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၇'အစ '၅'အဆုံး နှင့် '၆'အစ '၅'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 2){
+									//alert("first digist is 1 and Last digist is 6" + "first digist is 6 and Last digist is 7");//'၁'အစ '၆'အဆုံး၊ '၆'အစ '၇'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၁'အစ '၆'အဆုံး နှင့် '၆'အစ '၇'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 3){
+									//alert("first digist is 2 and Last digist is 7" + "first digist is 5 and Last digist is 7");//'၂'အစ '၇'အဆုံး၊ '၅'အစ '၇'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၂'အစ '၇'အဆုံး နှင့် '၅'အစ '၇'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 4){
+									//alert("first digist is 3 and Last digist is 1" + "first digist is 2 and Last digist is 1");//'၃'အစ '၁'အဆုံး၊ '၂'အစ '၁'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၃'အစ '၁'အဆုံး နှင့် '၂'အစ '၁'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 5){
+									//alert("first digist is 4 and Last digist is 2" + "first digist is 3 and Last digist is 2");//'၄'အစ '၂'အဆုံး၊ '၃'အစ '၂'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၄'အစ '၂'အဆုံးနှင့် '၃'အစ '၂'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 6){
+									//alert("first digist is 5 and Last digist is 3" + "first digist is 3 and Last digist is 4");//'၅'အစ '၃'အဆုံး၊ '၃'အစ '၄'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၅'အစ '၃'အဆုံး နှင့် '၃'အစ '၄'အဆုံး ထိုးပါ");
+								}
+								$(".same").text("ခုနှစ်ရက် သားသမီးအားလုံး ပျော်ရွှင်ချမ်းမြေ့ပါစေ");
+						}
+						else if(last_modulo == 1 || last_modulo == 6){
+							//alert("You would have to Smallest Prizes....");
+							$(".conn").html("<i class='far fa-smile-beam'></i>ဝမ်းသာပါတယ်!<i class='far fa-smile-beam'></i>")
+							$(".y_or_n").text("ယခုနှစ်အတွင်း သင် ထီဆု အသေး ပေါက်နိုင်သည်။");
+							var pwa = mm_year % 7 ;
+							//alert(pwa);
+								if(pwa == 0){
+									//alert("first digist is 6 and Last digist is 4" + "first digist is 5 and Last digist is 4");//၆အစ ၄အဆုံး၊ ၅အစ ၄အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၆'အစ '၄'အဆုံး နှင့်  '၅'အစ '၄'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 1){
+									//alert("first digist is 7 and Last digist is 5" + "first digist is 6 and Last digist is 5");//'၇'အစ '၅'အဆုံး၊ '၆'အစ '၅'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၇'အစ '၅'အဆုံး နှင့် '၆'အစ '၅'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 2){
+									//alert("first digist is 1 and Last digist is 6" + "first digist is 6 and Last digist is 7");//'၁'အစ '၆'အဆုံး၊ '၆'အစ '၇'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၁'အစ '၆'အဆုံး နှင့် '၆'အစ '၇'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 3){
+									//alert("first digist is 2 and Last digist is 7" + "first digist is 5 and Last digist is 7");//'၂'အစ '၇'အဆုံး၊ '၅'အစ '၇'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၂'အစ '၇'အဆုံး နှင့် '၅'အစ '၇'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 4){
+									//alert("first digist is 3 and Last digist is 1" + "first digist is 2 and Last digist is 1");//'၃'အစ '၁'အဆုံး၊ '၂'အစ '၁'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၃'အစ '၁'အဆုံး နှင့် '၂'အစ '၁'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 5){
+									//alert("first digist is 4 and Last digist is 2" + "first digist is 3 and Last digist is 2");//'၄'အစ '၂'အဆုံး၊ '၃'အစ '၂'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၄'အစ '၂'အဆုံးနှင့် '၃'အစ '၂'အဆုံး ထိုးပါ");
+								}
+								else if(pwa == 6){
+									//alert("first digist is 5 and Last digist is 3" + "first digist is 3 and Last digist is 4");//'၅'အစ '၃'အဆုံး၊ '၃'အစ '၄'အဆုံး
+									$(".digist").text("ထီထိုးလျှင် '၅'အစ '၃'အဆုံး နှင့် '၃'အစ '၄'အဆုံး ထိုးပါ");
+								}
+								$(".same").text("ခုနှစ်ရက် သားသမီးအားလုံး ပျော်ရွှင်ချမ်းမြေ့ပါစေ");
+					}else{
+							//alert("Next year Lucky again!");
+							$(".y_or_n").html("<i class='far fa-sad-cry'></i>ဝမ်းနည်းပါတယ်!<i class='far fa-sad-cry'></i>");
+							$(".digist").text("ယခုနှစ်အတွင်း သင် ထီပေါက် နိုင်ချေမရှိပါ။");
+							$(".word").text("နောက်လာမည့်နှစ်တွင် သင် ထီပေါက်နိုင်ပါစေ။");
+							$(".same").text("ခုနှစ်ရက် သားသမီးအားလုံး ပျော်ရွှင်ချမ်းမြေ့ပါစေ");
+						}
+
+						
+			});
+			$(document).on("click", "#calculate", function() {
+				$('#popupbox').show();
+		});
+		
+		$(document).on("click", "#popup_close", function() {
+				$('#popupbox').hide();
+		});
+});					
+	</script> 
+</body>
+
+</html>

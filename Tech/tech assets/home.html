@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Tech_News</title>
+	
+
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Material Design Bootstrap -->
+	<link rel="stylesheet" href="css/mdb.min.css">
+	<!-- Our custom styles (optional) -->
+	<link rel="stylesheet" href="css/teamcs.css">
+	
+
+	<link rel="icon" href="images/app_icon.png" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="src/sweetalert2.css">
+	<style>
+		@font-face 
+		{
+		  font-family: 'Pyidaungsu';
+		  src: URL('font/Pyidaungsu.ttf') format('truetype');
+		}
+		body
+		{
+			font-family: Pyidaungsu;
+		}
+		.my_card{
+			margin-bottom: 20px;
+		}
+		.no_link{
+			text-decoration: none;
+		}
+		img
+		{
+			width: 350px;
+			height: 300px;
+		}
+		.toshow,.tohide
+		{
+			color: red;
+		}
+		.hidedata,#loading
+		{
+			display:none;
+		}
+		.tohide:hover,.toshow:hover
+		{
+			cursor: pointer;
+		}
+		.refresh
+		{
+			width: 30px;
+			height: 30px;
+			margin-left:90%;
+			margin-top: 0px;
+		}
+		.notitext
+		{
+			color: red;
+			font-weight: bold;
+		}
+		.chat{
+		  overflow: auto;
+		  overscroll-behavior: contain;
+		}
+
+	</style>
+</head>
+
+<body class="fixed-sn white-skin">
+
+	<!-- Main Navigation -->
+	<header>
+		<!-- Sidebar navigation -->
+		<div id="slide-out" class="side-nav sn-bg-4 fixed">
+			<ul class="custom-scrollbar">
+				<!-- Logo -->
+				<center><p><i class="fas fa-gift fa-2x pink-text ml-3" aria-hidden="true"></i></p></center>
+				<li class="logo-sn waves-effect py-3">
+					<div class="text-center">
+						
+						<p style="color:black; font-size:12px; padding-top: 50px;">
+							မာတိကာ
+						<p>
+					</div>
+				</li>
+				<!-- Side navigation links -->
+				<li>
+					<ul class="collapsible collapsible-accordion">
+						<li> 
+							<a href="home.html" class="collapsible-header waves-effect ui_navigation active" id="developreportbtn"><i class="w-fa fas fa-chart-pie  ui_navigation"></i>နည်းပညာသတင်းများ</a>
+						</li>
+						<li> 
+							<a href="#" class="collapsible-header waves-effect ui_navigation delete" id="developreportbtn"><i class="w-fa fas fa-chart-pie  ui_navigation"></i>သတင်းဟောင်းများဖျက်မည်</a>
+						</li>
+						<li> 
+							<a href="about.html" class="collapsible-header waves-effect ui_navigation" id="developreportbtn"><i class="w-fa fas fa-chart-pie  ui_navigation"></i>About</a>
+						</li>
+					</ul>
+
+					
+				</li>
+				<!-- Side navigation links -->
+			</ul>
+			<div class="sidenav-bg mask-strong"></div>
+		</div>
+		<!-- Sidebar navigation -->
+		<!-- Navbar -->
+		<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav" id="nav_id">
+			<!-- SideNav slide-out button -->
+			<div class="float-left"> <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+			</div>
+			<!-- Breadcrumb -->
+			<div class="breadcrumb-dn mr-auto align-center">
+				<p></p>
+			</div>
+			<div class="title_text mr-auto align-center text-center">
+				<h4 id="header_id" style="padding-left: 15px;"> နည်းပညာသတင်းများ</h4>				
+			</div>
+			<div class="d-flex change-mode">
+				<!-- Navbar links -->
+				<ul class="nav navbar-nav nav-flex-icons ml-auto">
+					<li class="nav-item dropdown">
+						<a  href="#" class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-bell"><span class="notitext"></span></i>  <span class="clearfix d-none d-sm-inline-block"></span>
+						</a>
+
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown" style="display: none;"> <a   href="#"  class="dropdown-item ui_navigation" href="#login_section" id="logout_btn">မူလစာမျက်နှာ</a>
+						</div>
+					</li>
+				</ul>
+				<!-- Navbar links -->
+			</div>
+		</nav>
+		
+	</header>
+	<!-- Main Navigation -->
+
+	<!-- Main layout -->
+	<main>
+		<div class="container-fluid">
+			<!-- Section: Intro -->
+			<span><img class="refresh" src="images/refresh.png"></span>
+			<section id="intro_section ">
+
+				<center><div class="spinner-border text-primary" role="status" id="loading">
+		            <span class="sr-only">Loading...</span>
+		        </div></center>
+		        
+				<div id="toappend" class="chat">
+				
+					
+				</div>
+			</section>
+			<!-- Section: Intro -->
+		</div>
+	</main>
+	<!-- Main layout -->
+
+	<!-- Footer -->
+	<footer class="page-footer pt-0 mt-5 rgba-stylish-light">
+		<!-- Copyright -->
+		<div class="footer-copyright py-3 text-center">
+			<div class="container-fluid">Developed By : <a href="#" target="_blank"><a href="https://www.facebook.com/mmsoftware100"> TEAM CS </a><br>
+				<span>Version 1.0</span>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+
+	
+	
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+
+	
+	<script src="js/modernizr.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/underscore.min.js"></script>
+	<script src="js/backbone.js"></script>
+
+
+	<!-- Initializations -->
+	<script>
+		// SideNav Initialization
+		    $(".button-collapse").sideNav();
+		
+		    var container = document.querySelector('.custom-scrollbar');
+		    var ps = new PerfectScrollbar(container, {
+		      wheelSpeed: 2,
+		      wheelPropagation: true,
+		      minScrollbarLength: 20
+		    });
+		
+		    // Data Picker Initialization
+		    //$('.datepicker').pickadate();
+		
+		   
+	</script>
+	<!-- Our JavaScript -->
+	<script type="text/javascript" src="js/software_store.js"></script>
+	<script src='src/sweetalert2.js' type='text/javascript'></script>
+	<script type="text/javascript">
+		var count=0;
+		function convertEngToMyanmar(num)
+		{
+			num += "";
+			num = num.split(0).join("၀");
+			num = num.split(1).join("၁");
+			num = num.split(2).join("၂");
+			num = num.split(3).join("၃");
+			num = num.split(4).join("၄");
+			num = num.split(5).join("၅");
+			num = num.split(6).join("၆");
+			num = num.split(7).join("၇");
+			num = num.split(8).join("၈");
+			num = num.split(9).join("၉");
+			return num;
+		}
+		function nointernet()
+		{
+			const Toast = Swal.mixin({
+			  toast: true,
+			  position: 'top-end',
+			  showConfirmButton: false,
+			  timer: 3000,
+			  timerProgressBar: true,
+			  onOpen: (toast) => {
+			    toast.addEventListener('mouseenter', Swal.stopTimer)
+			    toast.addEventListener('mouseleave', Swal.resumeTimer)
+			  }
+			})
+
+			Toast.fire({
+			  icon: 'error',
+			  title: '<span style="color:yellow;">အင်တာနက်ချိတ်ဆက်မှုမရှိပါ !</span>'
+			})
+		}
+		function nonewsdata()
+		{
+			const Toast = Swal.mixin({
+			  toast: true,
+			  position: 'top-end',
+			  showConfirmButton: false,
+			  timer: 3000,
+			  timerProgressBar: true,
+			  onOpen: (toast) => {
+			    toast.addEventListener('mouseenter', Swal.stopTimer)
+			    toast.addEventListener('mouseleave', Swal.resumeTimer)
+			  }
+			})
+
+			Toast.fire({
+			  icon: 'error',
+			  title: '<span style="color:gold;">သတင်းအသစ်များမရှိသေးပါ !</span>'
+			})
+		}
+		function datanews()
+		{
+			const Toast = Swal.mixin({
+			  toast: true,
+			  position: 'top-end',
+			  showConfirmButton: false,
+			  timer: 3000,
+			  timerProgressBar: true,
+			  onOpen: (toast) => {
+			    toast.addEventListener('mouseenter', Swal.stopTimer)
+			    toast.addEventListener('mouseleave', Swal.resumeTimer)
+			  }
+			})
+
+			Toast.fire({
+			  icon: 'success',
+			  title: '<span style="color:green;">သတင်းအသစ်များရရှိပါပြီ !</span>'
+			})
+		}
+		//=============server ကသိမ်းထားတဲ့အတိုင်းပေါ်အောင်=========
+		function nl2br (str, is_xhtml) {
+		    if (typeof str === 'undefined' || str === null) {
+		        return '';
+		    }
+		    var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+		    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+		}
+
+
+		function getrequest()
+		{
+			if(navigator.onLine)
+			{
+				$("#loading").show();
+				
+				//===================get from server=======================
+				var lastid=localStorage.getItem("lastid");
+				$.get("https://websitedirectory.000webhostapp.com/tech_server/tech_news.php",{tech_news:"tech_news",lastid:lastid},function(res){ console.log(res);
+					if(res!=404)
+					{
+						var newdata=JSON.parse(res);//console.log(newdata[0]['title']);
+						var org=JSON.parse(localStorage.getItem("localdata"));
+
+						var array_id= new Array();
+
+						localStorage.setItem("localdata",JSON.stringify(newdata));
+						var decode=JSON.parse(localStorage.localdata);//console.log("local :"+decode[0]['title']);
+						for(i=0;i<decode.length;i++)
+						{
+							$("#toappend").prepend('<span style="color:blue;">'+decode[i]['title']+'</span><div class="card"><div class="card-body"><p>'+convertEngToMyanmar(decode[i]['posttime'])+'<p><p>'+nl2br(decode[i]['part1'])+'</p><center><img src="https://websitedirectory.000webhostapp.com/tech_server/images/'+decode[i]['image']+'" alt="No Internet(image)"></center><span class="toshow">ဆက်လက်ဖတ်ရှု့ရန် </span><span class="hidedata"><p>'+nl2br(decode[i]['part2'])+'</p><span class="tohide">ပိတ်မည် </span></span></div></div><br>');
+
+							array_id[i]=decode[i]['dbId'];
+						}
+
+						lastid=Math.max.apply(null,array_id);
+					 	localStorage.setItem("lastid",lastid);console.log("last id : "+localStorage.getItem("lastid"));
+
+					 	if(org===null)
+						{
+							localStorage.setItem("localdata",JSON.stringify(newdata));
+						}
+						else
+						{
+							var all=org.concat(newdata);
+							localStorage.setItem("localdata",JSON.stringify(all));
+						}
+						$("#loading").hide();
+						datanews();
+						count+=decode.length;//alert("count "+count);
+						// ==== for noti count ===
+						localStorage.setItem("noticount",JSON.stringify(count));
+					}
+					else
+					{
+						nonewsdata();
+						$("#loading").hide();
+					}
+				});
+			}
+			$(".notitext").text(localStorage.getItem('noticount'));
+		}
+
+		// ======= set interval fun =======
+		setInterval(close, 10000);
+		function close()
+		{
+			$("#loading").hide();
+		}
+
+		$(document).ready(function(){
+			$(".notitext").text(localStorage.getItem('noticount'));//alert(localStorage.getItem('noticount'));
+			//========= လိုအပ်လာရင်ဖျက်ရန်=========
+			$.post("https://websitedirectory.000webhostapp.com/tech_server/tech_news.php",{todelete:"delete"},function(res){//alert(res);
+				if(res==1)
+				{
+					localStorage.removeItem('localdata');
+				}
+			});
+			//============== user မှ delete လုပ်ရင် ======
+			$(document).on("click",".delete",function(){ //alert("delete ok");
+				var check=confirm("ဖျက်မှာသေချာလား ?");//alert(check);
+				if(check==true)
+				{
+					localStorage.removeItem('localdata');
+					localStorage.removeItem('noticount');
+					window.location.assign("home.html");
+				}
+			});
+
+			//$("#loading").show();
+			$(document).on("click",".toshow",function(){
+				//alert("ok");
+				$(this).next().show();
+			});
+			$(document).on("click",".tohide",function(){
+				//alert("ok");
+				$(this).parent().hide();
+			});
+
+			//===========server data မရှိရင် storage ထဲကပြအောင်================
+			 if(!navigator.onLine)
+			{
+				//alert("အင်တာနက်ချိတ်ဆက်မှုမရှိပါ");
+				nointernet();
+			}
+				var storedata=JSON.parse(localStorage.getItem("localdata"));
+				if(storedata)
+				{
+					for(i=0;i<storedata.length;i++)
+					{
+						$("#toappend").prepend('<span class="example z-depth-5" style="color:blue;">'+storedata[i]['title']+'</span><div class="card"><div class="card-body"><p>'+convertEngToMyanmar(storedata[i]['posttime'])+'<p><p>'+nl2br(storedata[i]['part1'])+'</p><center><img src="https://websitedirectory.000webhostapp.com/tech_server/images/'+storedata[i]['image']+'" alt="No Internet(image)"></center><input type="hidden" value="'+storedata[i]['dbId']+'"><span class="toshow">ဆက်လက်ဖတ်ရှု့ရန် </span><span class="hidedata"><p>'+nl2br(storedata[i]['part2'])+'</p><span class="tohide">ပိတ်မည် </span></span></div></div><br>');
+					}
+				}
+				else
+				{
+					// alert("အင်တာနက်ချိတ်ဆက်မှုမရှိပါ");
+				}
+			
+			//============== connect to server fun ========
+			getrequest();
+
+
+			//====== refresh =====
+			$(document).on("click",".refresh",function(){ //alert("refresh ok");
+				getrequest();
+			});
+
+		});
+	</script>
+</body>
+
+</html>
