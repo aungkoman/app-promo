@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Live</title>
+</head>
+<body>
+<!-- CSS  -->
+ <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+
+
+<!-- HTML -->
+<h3>https://d3cs5y5559s57s.cloudfront.net/live/channelk.m3u8</h3>
+<h3>Channel K</h3>
+<video id='channelk'  class="video-js vjs-default-skin" width="400" height="300" controls>
+<source type="application/x-mpegURL" src="https://d3cs5y5559s57s.cloudfront.net/live/channelk.m3u8">
+</video>
+<hr>
+
+<h3>https://maharlive.b-cdn.net/stream.m3u8</h3>
+<h3>Mahar</h3>
+<video id='mahar'  class="video-js vjs-default-skin" width="400" height="300" controls>
+<source type="application/x-mpegURL" src="https://maharlive.b-cdn.net/stream.m3u8">
+</video>
+<hr>
+
+<h3>Mrtv 4</h3>
+<video id='hls-example'  class="video-js vjs-default-skin" width="400" height="300" controls>
+<source type="application/x-mpegURL" src="http://104275ooyala-lh.akamaihd.net/i/forevergroup_02@449366/master.m3u8">
+</video>
+<hr>
+<h3>Channnel 7</h3>
+<video id='channel7'  class="video-js vjs-default-skin" width="400" height="300" controls>
+<source type="application/x-mpegURL" src="http://104275ooyala-lh.akamaihd.net/i/forevergroup_03@449367/master.m3u8">
+</video>
+<hr>
+<h3>Buddha Channel</h3>
+<video id='buddha'  class="video-js vjs-default-skin" width="400" height="300" controls>
+<source type="application/x-mpegURL" src="http://104275ooyala-lh.akamaihd.net/i/forevergroup_01@449365/master.m3u8">
+</video>
+
+
+<!-- JS code -->
+<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+
+<script>
+var player = videojs('hls-example');
+player.play();
+var channel7= videojs('channel7');
+channel7.play();
+var buddha = videojs('buddha');
+buddha.play();
+var mahar = videojs('mahar');
+mahar.play();
+
+var channelk = videojs('channelk');
+channelk.play();
+</script>
+
+</body>
+</html>
